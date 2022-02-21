@@ -1,0 +1,50 @@
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .todos__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 78%;
+    height: 30px;
+    margin: 10px 0px 10px 0px;
+    padding: 20px 10px 33px 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #888888;
+    font-weight: 900;
+    transition: all 0.2s ease-in-out;
+
+    .textbox {
+      display: flex;
+
+      .title {
+        margin-right: 10px;
+        color: rgb(16, 184, 184);
+      }
+    }
+
+    .icondisplay {
+      display: flex;
+
+      .check {
+        color: green;
+        margin-left: 8px;
+      }
+      .completion {
+        color: rgb(16, 184, 184);
+      }
+      .faXmark {
+        color: red;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .todos__box:hover {
+    transform: scale(1.028);
+  }
+}

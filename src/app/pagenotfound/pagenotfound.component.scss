@@ -1,0 +1,36 @@
+.background-color {
+  background: linear-gradient(125deg, #6a89cc, #b8e994);
+  height: 89vh;
+}
+.container {
+  width: 99%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #343434;
+}
+.container h1 {
+  font-size: 300px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+  background: url(https://techcrunch.com/wp-content/uploads/2014/12/matrix.jpg?w=730&crop=1)
+    center no-repeat;
+  color: transparent;
+  background-clip: text;
+}
+.container a {
+  text-decoration: none;
+  background: #e55039aa;
+  padding: 12px 24px;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: uppercase;
+}
+.container a:hover {
+  background: #e55039;
+}
+p {
+  font-size: 20px;
+}

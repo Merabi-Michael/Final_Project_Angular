@@ -1,0 +1,225 @@
+@mixin font {
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(0, 183, 255);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(228, 209, 209);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(226, 23, 23);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($color: #000000, $alpha: 1);
+}
+
+$background: rgb(236, 236, 236);
+
+.mainbox {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px 10px 0px;
+
+  .smallboxdiv {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    flex-direction: column;
+    padding: 20px 10px 90px 20px;
+
+    .centerbox {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .x {
+      margin-right: 15px;
+      color: rgb(233, 0, 0);
+      font-size: 22px;
+      font-weight: bolder;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      cursor: pointer;
+    }
+
+    .left {
+      margin-bottom: 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .title {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid silver;
+      @include font();
+    }
+
+    .titletext {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+      color: darken($color: #000000, $amount: 0);
+    }
+
+    .bodytext {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      height: 100px;
+      color: darken($color: #000000, $amount: 0);
+    }
+
+    // *ngIf ==>
+
+    .inputmodel:focus {
+      outline: none;
+    }
+
+    .textarea {
+      width: 450px;
+      height: 100px;
+      border: 1px solid rgb(0, 134, 134);
+      border-radius: 5px;
+    }
+
+    .textarea:focus {
+      outline: none;
+    }
+
+    .body {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid silver;
+      @include font();
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 4px 20px 4px 20px;
+      border-radius: 2px;
+      background-color: rgb(136, 161, 22);
+      border-color: rgb(0, 90, 90);
+      color: white;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+  }
+
+  .smallboxdiv__1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    border-radius: 5px;
+
+    .commentdiv {
+      background-color: $background;
+      height: 300px;
+      border-radius: 5px;
+      overflow-y: auto;
+
+      .forcomment {
+        display: flex;
+        color: rgb(0, 183, 255);
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 5px;
+
+        .image {
+          height: 50px;
+          margin-right: 15px;
+        }
+
+        .commentsname {
+          margin-bottom: 10px;
+        }
+
+        .commentsbody {
+          width: 70%;
+        }
+      }
+    }
+
+    // just adding comment
+
+    .addcomment {
+      padding: 10px 0px 10px 0px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+
+    .comment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding-bottom: 10px;
+      background-color: rgb(224, 224, 224);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .img {
+        background-image: url(data:image/jpeg;base64,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);
+        width: 100%;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        left: -130px;
+        top: 80px;
+      }
+
+      .namecomment {
+        margin-top: -25px;
+      }
+
+      .bodycomment {
+        margin-top: 20px;
+      }
+
+      .input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid black;
+        background-color: rgb(224, 224, 224);
+        margin-top: 7px;
+        @include font();
+      }
+
+      .input:focus {
+        outline: none;
+      }
+
+      .add {
+        margin: 10px 0px 0px 130px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: rgb(117, 139, 139);
+        border-radius: 3px;
+        border-color: rgb(128, 156, 156);
+        padding: 2px 15px 2px 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

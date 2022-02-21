@@ -1,0 +1,85 @@
+<!-- section__1 -->
+<section class="section__1">
+  <div class="buttondiv">
+    <button class="btn" (click)="editShow()" *ngIf="!showMode">Add Post</button>
+  </div>
+
+  <form [formGroup]="postform" *ngIf="showMode">
+    <div class="formdiv">
+      <div class="smalldiv">
+        <div class="inputdiv">
+          <label class="label">Post Author</label>
+          <input type="text" class="input" formControlName="author" />
+          <div class="error" *ngIf="Author.touched">
+            <div *ngIf="Author?.errors?.['required']">
+              The field must be full
+            </div>
+          </div>
+        </div>
+
+        <div class="inputdiv">
+          <label class="label">Title</label>
+          <input type="text" class="input" formControlName="title" />
+          <div class="error" *ngIf="Title.touched">
+            <div *ngIf="Title?.errors?.['required']">
+              The field must be full
+            </div>
+          </div>
+        </div>
+
+        <div class="inputdiv">
+          <label class="label">Body</label>
+          <input type="text" class="input" formControlName="body" />
+          <div class="error" *ngIf="Body.touched">
+            <div *ngIf="Body?.errors?.['required']">The field must be full</div>
+          </div>
+        </div>
+
+        <div class="btns">
+          <div class="adddiv">
+            <button
+              class="add"
+              type="submit"
+              (click)="onAdd()"
+              [disabled]="postform.status === 'INVALID'"
+            >
+              Add
+            </button>
+            <button class="backX" (click)="editShow()" *ngIf="showMode">
+              X
+            </button>
+          </div>
+          <div class="resetbox">
+            <button class="reset" type="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Section__2 -->
+
+<section>
+  <div class="mainbox">
+    <div class="titlediv">
+      <h4>Post's User</h4>
+      <br />
+      <h4>Title</h4>
+      <br />
+      <h4>Body</h4>
+    </div>
+
+    <div
+      class="container"
+      *ngFor="let item of posts"
+      [routerLink]="['/posts', item.id]"
+    >
+      <div class="secondcontainer">
+        <p class="text">{{ getName(item.userId) }}</p>
+        <p class="title">{{ item.title }}</p>
+        <p class="body">{{ item.body }}</p>
+      </div>
+    </div>
+  </div>
+</section>

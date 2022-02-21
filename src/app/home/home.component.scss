@@ -1,0 +1,128 @@
+// image
+.section-img {
+  background-image: url(https://wallpaperaccess.com/full/28963.jpg);
+  width: 100%;
+  height: 880px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+// title
+.h1 {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+}
+
+.h1::first-letter {
+  color: red;
+}
+span::first-letter {
+  color: red;
+}
+
+.h3 {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+}
+
+// boxes
+
+.block {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: wheat;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 5%;
+}
+.block2 {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: wheat;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 5%;
+}
+
+.block3 {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: wheat;
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  background: rgba(76, 175, 80, 0.3);
+  border-radius: 5%;
+}
+
+.circle {
+  width: 131px;
+  height: 45px;
+  color: #ffffff;
+  border: 2px solid;
+  border-radius: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pbutton {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+// icons
+.icons {
+  color: red;
+}
+
+// post section
+.section__container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.postcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 60%);
+  text-align: center;
+  grid-template-rows: repeat(1, 5%);
+  justify-content: space-between;
+}
+.postdiv {
+  border: 1px solid black;
+}
